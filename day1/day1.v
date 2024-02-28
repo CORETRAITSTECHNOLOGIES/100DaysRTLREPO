@@ -5,6 +5,7 @@ input wire[0:7] y,
 input  wire sel,
 output wire [0:7]f);
 
-assign  f = sel? y :x;
+//assign  f = (~sel&x+ sel&y);
+assign  f = (sel? y:x);
 
 endmodule
